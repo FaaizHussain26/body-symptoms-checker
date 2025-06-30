@@ -1,0 +1,1 @@
+export { HumanBody } from "./human-body"

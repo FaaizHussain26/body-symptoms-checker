@@ -1,0 +1,1 @@
+export { TreatmentRecommendations } from "./TreatmentRecommendation"

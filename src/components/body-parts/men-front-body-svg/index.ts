@@ -1,0 +1,1 @@
+export { MenBodySvgComponent } from "./men-front-body-svg";

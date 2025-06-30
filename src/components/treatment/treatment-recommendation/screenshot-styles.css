@@ -1,0 +1,71 @@
+/* Fallback styles for screenshot compatibility */
+.screenshot-safe {
+    --color-primary: #3b82f6;
+    --color-secondary: #64748b;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-background: #ffffff;
+    --color-foreground: #0f172a;
+  }
+  
+  .screenshot-safe .bg-blue-100 {
+    background-color: #dbeafe !important;
+  }
+  
+  .screenshot-safe .text-blue-800 {
+    color: #1e40af !important;
+  }
+  
+  .screenshot-safe .bg-green-100 {
+    background-color: #dcfce7 !important;
+  }
+  
+  .screenshot-safe .text-green-800 {
+    color: #166534 !important;
+  }
+  
+  .screenshot-safe .bg-yellow-100 {
+    background-color: #fef3c7 !important;
+  }
+  
+  .screenshot-safe .text-yellow-800 {
+    color: #92400e !important;
+  }
+  
+  .screenshot-safe .bg-red-100 {
+    background-color: #fee2e2 !important;
+  }
+  
+  .screenshot-safe .text-red-800 {
+    color: #991b1b !important;
+  }
+  
+  .screenshot-safe .bg-purple-100 {
+    background-color: #f3e8ff !important;
+  }
+  
+  .screenshot-safe .text-purple-800 {
+    color: #6b21a8 !important;
+  }
+  
+  .screenshot-safe .bg-orange-100 {
+    background-color: #fed7aa !important;
+  }
+  
+  .screenshot-safe .text-orange-800 {
+    color: #9a3412 !important;
+  }
+  
+  .screenshot-safe .bg-amber-50 {
+    background-color: #fffbeb !important;
+  }
+  
+  .screenshot-safe .text-amber-800 {
+    color: #92400e !important;
+  }
+  
+  .screenshot-safe .border-amber-200 {
+    border-color: #fde68a !important;
+  }
+  
