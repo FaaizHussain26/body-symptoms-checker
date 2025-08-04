@@ -1,0 +1,36 @@
+/* Informational body styling - non-interactive */
+.informational-body .sc-body-model-svg__path {
+  cursor: default !important;
+  transition: all 0.3s ease;
+  fill: var(--color-body-model-subtle-highlight, #c2e0f8) !important;
+  stroke: var(--color-body-model-outline, #1471c9) !important;
+  stroke-width: 1 !important;
+}
+
+.informational-body .sc-body-model-svg__path:hover {
+  /* Remove hover effects for non-interactive body */
+  fill: var(--color-body-model-subtle-highlight, #c2e0f8) !important;
+  stroke: var(--color-body-model-outline, #1471c9) !important;
+}
+
+/* Highlight affected areas */
+.informational-body .sc-body-model-svg__path--affected {
+  fill: #fecaca !important; /* red-200 */
+  stroke: #f87171 !important; /* red-400 */
+  stroke-width: 2 !important;
+  opacity: 0.9 !important;
+}
+
+/* Pulse animation for affected areas */
+.informational-body .sc-body-model-svg__path--affected {
+  animation: pulse-affected 2s infinite;
+}
+
+@keyframes pulse-affected {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

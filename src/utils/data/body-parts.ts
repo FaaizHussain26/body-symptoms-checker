@@ -1,4 +1,4 @@
-import type { BodyPart } from "@/contexts/symptoms-context"
+import type { BodyPart } from "@/contexts/symptoms-context";
 
 export const bodyParts: BodyPart[] = [
   {
@@ -9,28 +9,32 @@ export const bodyParts: BodyPart[] = [
         id: "memory-issues",
         name: "Memory Issues",
         severity: "moderate",
-        description: "Difficulty with memory, concentration, and cognitive function due to poor sleep quality",
+        description:
+          "Difficulty with memory, concentration, and cognitive function due to poor sleep quality",
         percentage: 19,
       },
       {
         id: "poor-sleep",
         name: "Poor Sleep Quality",
         severity: "severe",
-        description: "Fragmented sleep, frequent awakenings, and non-restorative sleep",
+        description:
+          "Fragmented sleep, frequent awakenings, and non-restorative sleep",
         percentage: 19,
       },
       {
         id: "morning-headaches",
         name: "Morning Headaches",
         severity: "moderate",
-        description: "Headaches upon waking, often caused by oxygen deprivation during sleep",
+        description:
+          "Headaches upon waking, often caused by oxygen deprivation during sleep",
         percentage: 19,
       },
       {
         id: "mood-disturbance",
         name: "Mood Disturbance",
         severity: "moderate",
-        description: "Depression, anxiety, PTSD, shortened attention span, moodiness and bad temper, poor judgment",
+        description:
+          "Depression, anxiety, PTSD, shortened attention span, moodiness and bad temper, poor judgment",
         percentage: 19,
       },
       {
@@ -51,23 +55,25 @@ export const bodyParts: BodyPart[] = [
         id: "loud-snoring",
         name: "Loud Snoring",
         severity: "moderate",
-        percentage: 65,
+        percentage: 70,
         description:
-          "Affects 50-80% of OSA patients. Relationship strained, morning headaches caused by oxygen deprivation",
+          "Affects 50-90% of OSA patients. Relationship discord, morning headaches caused by oxygen deprivation",
       },
       {
         id: "sleep-apnea",
         name: "Obstructive Sleep Apnea",
-        percentage: 20,
+        percentage: 70,
         severity: "severe",
-        description: "Repeated episodes of breathing cessation during sleep, affecting 1 in 5 adult Americans",
+        description:
+          "Repeated episodes of breathing cessation during sleep, affecting 1 in 5 adult Americans",
       },
       {
         id: "gasping-choking",
         name: "Gasping/Choking During Sleep",
         severity: "severe",
-        description: "Sudden awakening with gasping or choking sensations due to airway obstruction",
-        percentage: 65,
+        description:
+          "Sudden awakening with gasping or choking sensations due to airway obstruction",
+        percentage: 80,
       },
     ],
   },
@@ -81,7 +87,7 @@ export const bodyParts: BodyPart[] = [
         severity: "severe",
         description:
           "41% increased risk. Sleep Apnea is an identifiable cause of high blood pressure and leading cause of secondary hypertension",
-          percentage: 41,
+        percentage: 41,
       },
       {
         id: "coronary-artery-disease",
@@ -89,20 +95,21 @@ export const bodyParts: BodyPart[] = [
         severity: "severe",
         description: "30% increased risk of developing coronary artery disease",
         percentage: 30,
-
       },
       {
         id: "congestive-heart-failure",
         name: "Congestive Heart Failure (CHF)",
         percentage: 140,
         severity: "severe",
-        description: "140% increased risk. Moderate OSA has increased mortality rates",
+        description:
+          "140% increased risk. Moderate OSA has increased mortality rates",
       },
       {
         id: "stroke-risk",
         name: "Stroke Risk",
         severity: "severe",
-        description: "60% increased risk. Men with moderate to severe OSA were nearly 3x more likely to have stroke",
+        description:
+          "60% increased risk. Men with moderate to severe OSA were nearly 3x more likely to have stroke",
         percentage: 60,
       },
       {
@@ -123,14 +130,16 @@ export const bodyParts: BodyPart[] = [
         id: "gerd",
         name: "Gastroesophageal Reflux Disease (GERD)",
         severity: "moderate",
-        description: "18% of OSA patients experience GERD, with acid reflux symptoms worsening during sleep",
+        description:
+          "18% of OSA patients experience GERD, with acid reflux symptoms worsening during sleep",
         percentage: 18,
       },
       {
         id: "high-cholesterol",
         name: "High Cholesterol",
         severity: "moderate",
-        description: "10% increased risk of elevated cholesterol levels associated with sleep apnea",
+        description:
+          "10% increased risk of elevated cholesterol levels associated with sleep apnea",
         percentage: 10,
       },
     ],
@@ -143,7 +152,8 @@ export const bodyParts: BodyPart[] = [
         id: "diabetes-type-2",
         name: "Diabetes Type II",
         severity: "severe",
-        description: "15% increased risk. Lack of insulin control and poorly controlled blood sugars",
+        description:
+          "15% increased risk. Lack of insulin control and poorly controlled blood sugars",
         percentage: 15,
       },
       {
@@ -152,14 +162,15 @@ export const bodyParts: BodyPart[] = [
         severity: "severe",
         percentage: 34,
         description:
-          "34% correlation. As sleep shortens or diminishes in quality, appetite for high calorie food increases. Best documented risk factor for OSA - 90% of obese males and 50% of obese females have OSA",
+          "34% correlation. As sleep shortens or diminishes in quality, appetite for high calorie food increases. Obesity is the best documented risk factor for OSA. The prevalence of OSA increases with Body Mass Index (BMI). Approximately 90% of OSA patients weigh 130% or more of their ideal body weight",
       },
       {
         id: "weight-gain",
         percentage: 34,
         name: "Unexplained Weight Gain",
         severity: "moderate",
-        description: "Poor sleep quality leads to hormonal changes that increase appetite and weight gain",
+        description:
+          "Poor sleep quality leads to hormonal changes that increase appetite and weight gain",
       },
     ],
   },
@@ -171,16 +182,17 @@ export const bodyParts: BodyPart[] = [
         id: "nocturia",
         name: "Nocturia (Frequent Nighttime Urination)",
         severity: "moderate",
-        description: "Frequent urination at night, disrupting sleep patterns and contributing to sleep fragmentation",
+        description:
+          "Frequent urination at night, disrupting sleep patterns and contributing to sleep fragmentation",
         percentage: 40,
-
       },
       {
         id: "sexual-dysfunction",
         name: "Sexual Dysfunction",
         severity: "moderate",
         percentage: 40,
-        description: "40% of OSA patients experience loss of libido and impotence",
+        description:
+          "40% of OSA patients experience loss of libido and impotence",
       },
     ],
   },
@@ -191,16 +203,18 @@ export const bodyParts: BodyPart[] = [
       {
         id: "asthma",
         name: "Asthma",
-        percentage: 42,
+        percentage: 4,
         severity: "moderate",
-        description: "42% correlation with sleep apnea. OSA can worsen asthma symptoms and vice versa",
+        description:
+          "4% correlation with sleep apnea. OSA can worsen asthma symptoms and vice versa",
       },
       {
         id: "shortness-of-breath",
         name: "Shortness of Breath",
-        severity: "moderate",          
-        percentage: 42,
-        description: "Difficulty breathing, especially during physical activity or when lying down",
+        severity: "moderate",
+        percentage: 35,
+        description:
+          "Difficulty breathing, especially during physical activity or when lying down",
       },
     ],
   },
@@ -214,14 +228,15 @@ export const bodyParts: BodyPart[] = [
         severity: "severe",
         description:
           "2.5% more likely risk of death. More than 50% of sudden deaths from Sleep Apnea occur between 10pm and 6am",
-          percentage: 2.5,
+        percentage: 2.5,
       },
       {
         id: "chronic-fatigue",
         name: "Chronic Fatigue",
         severity: "severe",
-        description: "Persistent exhaustion despite spending adequate time in bed, due to poor sleep quality",
-        percentage: 19,
+        description:
+          "Persistent exhaustion despite spending adequate time in bed, due to poor sleep quality",
+        percentage: 70,
       },
       {
         id: "reduced-quality-of-life",
@@ -229,8 +244,8 @@ export const bodyParts: BodyPart[] = [
         severity: "moderate",
         description:
           "Overall decreased life satisfaction due to multiple health complications from untreated sleep apnea",
-        percentage: 19,
+        percentage: 55,
       },
     ],
   },
-]
+];

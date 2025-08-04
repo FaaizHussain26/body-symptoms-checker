@@ -1,26 +1,35 @@
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { useSymptoms, type UserDemographics } from "@/contexts/symptoms-context"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { User, Calendar, Users, Mail, Phone } from "lucide-react"
+import { useState } from "react";
+import {
+  useSymptoms,
+  type UserDemographics,
+} from "@/contexts/symptoms-context";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { User, Calendar, Users, Mail, Phone } from "lucide-react";
 
 export const DemographicsForm: React.FC<{}> = () => {
-  const { dispatch } = useSymptoms()
+  const { dispatch } = useSymptoms();
   const [formData, setFormData] = useState<UserDemographics>({
     name: undefined,
     age: null,
     sex: "other",
     email: "",
     phone: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (formData.age && formData.sex) {
       dispatch({
         type: "SET_DEMOGRAPHICS",
@@ -31,12 +40,12 @@ export const DemographicsForm: React.FC<{}> = () => {
           email: formData.email || undefined,
           phone: formData.phone || undefined,
         },
-      })
+      });
     }
-  }
+  };
 
   const isValid =
-    formData.age && formData.sex && formData.age > 0 && formData.age < 120
+    formData.age && formData.sex && formData.age > 0 && formData.age < 120;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
@@ -45,8 +54,13 @@ export const DemographicsForm: React.FC<{}> = () => {
           <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
             <User className="h-8 w-8 text-blue-600" />
           </div>
-          <CardTitle className="text-2xl">Welcome to Symptoms Checker</CardTitle>
-          <CardDescription>Please provide some basic information to get personalized health insights</CardDescription>
+          <CardTitle className="text-2xl">
+            Welcome to Sleep Apnea Risk Assessment
+          </CardTitle>
+          <CardDescription>
+            Please provide some basic information to get personalized sleep
+            apnea risk assessment and treatment recommendations
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -60,7 +74,9 @@ export const DemographicsForm: React.FC<{}> = () => {
                 type="text"
                 placeholder="Enter your name"
                 value={formData.name}
-                onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, name: e.target.value }))
+                }
               />
             </div>
             <div className="space-y-2">
@@ -73,7 +89,9 @@ export const DemographicsForm: React.FC<{}> = () => {
                 type="tel"
                 placeholder="Enter your phone number"
                 value={formData.phone}
-                onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, phone: e.target.value }))
+                }
               />
             </div>
             <div className="space-y-2">
@@ -86,7 +104,9 @@ export const DemographicsForm: React.FC<{}> = () => {
                 type="email"
                 placeholder="Enter your email"
                 value={formData.email}
-                onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, email: e.target.value }))
+                }
               />
             </div>
 
@@ -102,7 +122,12 @@ export const DemographicsForm: React.FC<{}> = () => {
                 min="1"
                 max="120"
                 value={formData.age || ""}
-                onChange={(e) => setFormData((prev) => ({ ...prev, age: Number(e.target.value) }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    age: Number(e.target.value),
+                  }))
+                }
                 required
               />
             </div>
@@ -115,7 +140,10 @@ export const DemographicsForm: React.FC<{}> = () => {
               <RadioGroup
                 value={formData.sex}
                 onValueChange={(value) =>
-                  setFormData((prev) => ({ ...prev, sex: value as "male" | "female" | "other" }))
+                  setFormData((prev) => ({
+                    ...prev,
+                    sex: value as "male" | "female" | "other",
+                  }))
                 }
               >
                 <div className="flex items-center space-x-2">
@@ -134,11 +162,11 @@ export const DemographicsForm: React.FC<{}> = () => {
             </div>
 
             <Button type="submit" className="w-full" disabled={!isValid}>
-              Continue to Symptoms Checker
+              Continue to Sleep Apnea Symptoms Checklist
             </Button>
           </form>
         </CardContent>
       </Card>
     </div>
-  )
-}
+  );
+};
