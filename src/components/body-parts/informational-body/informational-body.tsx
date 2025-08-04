@@ -1,20 +1,22 @@
-import React, { useEffect } from "react";
-import "./informational-body.css";
+import { useEffect, useMemo } from "react";
 import "../human-body/human-body.css";
 import "../human-body/variables.css";
-import "../men-front-body-svg/men-body.css";
 import { MenBodySvgComponent } from "../men-front-body-svg";
+import "../men-front-body-svg/men-body.css";
+import "./informational-body.css";
 
 export const InformationalBody = () => {
   // Sleep apnea affected body parts
-  const affectedAreas = [
-    "body-model-head",
-    "body-model-neck_or_throat",
-    "body-model-chest",
-    "body-model-upper_abdomen",
-    "body-model-mid_abdomen",
-    "body-model-lower_abdomen",
-  ];
+  const affectedAreas = useMemo(() => {
+    return [
+      "body-model-head",
+      "body-model-neck_or_throat",
+      "body-model-chest",
+      "body-model-upper_abdomen",
+      "body-model-mid_abdomen",
+      "body-model-lower_abdomen",
+    ];
+  }, []);
 
   useEffect(() => {
     // Highlight affected areas after component mounts

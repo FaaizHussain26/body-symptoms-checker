@@ -18,11 +18,11 @@ import {
 } from "@/components/ui/card";
 import { User, Calendar, Users, Mail, Phone } from "lucide-react";
 
-export const DemographicsForm: React.FC<{}> = () => {
+export const DemographicsForm: React.FC = () => {
   const { dispatch } = useSymptoms();
   const [formData, setFormData] = useState<UserDemographics>({
-    name: undefined,
-    age: null,
+    name: "",
+    age: 0,
     sex: "other",
     email: "",
     phone: "",
